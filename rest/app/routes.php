@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/plugs/1/up', function() {
+	$script = realpath(sprintf('%s/../gpio/up1.py', base_path()));
+	$command = sprintf('python %s', $script);
+	exec($command);
+});
+
+Route::get('/plugs/1/down', function() {
+	$script = realpath(sprintf('%s/../gpio/down1.py', base_path()));
+	$command = sprintf('python %s', $script);
+	exec($command);
 });
