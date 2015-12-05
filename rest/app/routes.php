@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function() {
-	return 'TODO Return a web page with buttons an\' everythin\'';
+	return Response::view('dashboard');
 });
 
 Route::get('/1/up', function() {
