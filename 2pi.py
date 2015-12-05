@@ -66,6 +66,7 @@ try:
 	# Disable the modulator
 	GPIO.output (22, False)
 
+finally:
 	GPIO.cleanup()
 
 	# raw_input('hit return key to send socket 2 ON code')
@@ -132,6 +133,6 @@ try:
 	# # Disable the modulator
 	# GPIO.output (22, False)
 
-# Clean up the GPIOs for next time
-except KeyboardInterrupt:
-	GPIO.cleanup()
+# # Clean up the GPIOs for next time
+# except KeyboardInterrupt:
+# 	GPIO.cleanup()
