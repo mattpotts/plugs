@@ -20,7 +20,7 @@ Route::get('/1/up', function() {
 	$command = sprintf('sudo python %s', $script);
 	exec($command);
 
-	Redirect::to('/');
+	return Response::view('dashboard');
 });
 
 Route::get('/1/down', function() {
@@ -28,5 +28,5 @@ Route::get('/1/down', function() {
 	$command = sprintf('sudo python %s', $script);
 	exec($command);
 
-	Redirect::to('/');
+	return Response::view('dashboard');
 });
