@@ -30,3 +30,19 @@ Route::get('/1/down', function() {
 
 	return Response::view('dashboard');
 });
+
+Route::get('/2/up', function() {
+	$script = realpath(sprintf('%s/../gpio/up2.py', base_path()));
+	$command = sprintf('python %s', $script);
+	exec($command);
+
+	return Response::view('dashboard');
+});
+
+Route::get('/2/down', function() {
+	$script = realpath(sprintf('%s/../gpio/down2.py', base_path()));
+	$command = sprintf('python %s', $script);
+	exec($command);
+
+	return Response::view('dashboard');
+});
