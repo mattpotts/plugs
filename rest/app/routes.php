@@ -17,7 +17,7 @@ Route::get('/', function() {
 
 Route::get('/1/up', function() {
 	$script = realpath(sprintf('%s/../gpio/up1.py', base_path()));
-	$command = sprintf('sudo python %s', $script);
+	$command = sprintf('python %s', $script);
 	exec($command);
 
 	return Response::view('dashboard');
@@ -25,7 +25,7 @@ Route::get('/1/up', function() {
 
 Route::get('/1/down', function() {
 	$script = realpath(sprintf('%s/../gpio/down1.py', base_path()));
-	$command = sprintf('sudo python %s', $script);
+	$command = sprintf('python %s', $script);
 	exec($command);
 
 	return Response::view('dashboard');
