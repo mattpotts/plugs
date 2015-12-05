@@ -34,9 +34,9 @@ GPIO.output (13, False)
 # True = '1', False ='0'
 
 try:
-	raw_input('hit return key to send socket 1 ON code')
+	# raw_input('hit return key to send socket 1 ON code')
 	# Set K0-K3
-	print "sending code 1111 socket 1 on"
+	# print "sending code 1111 socket 1 on"
 	GPIO.output (11, True)
 	GPIO.output (15, True)
 	GPIO.output (16, True)
