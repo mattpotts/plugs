@@ -66,6 +66,8 @@ try:
 	# Disable the modulator
 	GPIO.output (22, False)
 
+	GPIO.cleanup()
+
 	# raw_input('hit return key to send socket 2 ON code')
 	# # Set K0-K3
 	# print "sending code 1110 socket 2 on"
