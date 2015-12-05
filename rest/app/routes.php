@@ -15,13 +15,13 @@ Route::get('/', function() {
 	return 'test';
 });
 
-Route::get('/plugs/1/up', function() {
+Route::get('up', function() {
 	$script = realpath(sprintf('%s/../gpio/up1.py', base_path()));
 	$command = sprintf('python %s', $script);
 	exec($command);
 });
 
-Route::get('/plugs/1/down', function() {
+Route::get('down', function() {
 	$script = realpath(sprintf('%s/../gpio/down1.py', base_path()));
 	$command = sprintf('python %s', $script);
 	exec($command);
