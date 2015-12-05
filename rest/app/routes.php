@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function() {
+	return 'test';
+});
+
 Route::get('/plugs/1/up', function() {
 	$script = realpath(sprintf('%s/../gpio/up1.py', base_path()));
 	$command = sprintf('python %s', $script);
