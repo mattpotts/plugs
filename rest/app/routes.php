@@ -13,7 +13,7 @@
 
 Route::get('/', function() {
 	$script = realpath(sprintf('%s/../gpio/up1.py', base_path()));
-	$command = sprintf('python %s', $script);
+	$command = sprintf('sudo python %s', $script);
 	echo get_current_user(), "\n";
 	echo $command, "\n";
 	return exec($command);
@@ -21,14 +21,14 @@ Route::get('/', function() {
 	return 'test';
 });
 
-Route::get('up', function() {
+Route::get('/up', function() {
 	$script = realpath(sprintf('%s/../gpio/up1.py', base_path()));
-	$command = sprintf('python %s', $script);
+	$command = sprintf('sudo python %s', $script);
 	exec($command);
 });
 
-Route::get('down', function() {
+Route::get('/down', function() {
 	$script = realpath(sprintf('%s/../gpio/down1.py', base_path()));
-	$command = sprintf('python %s', $script);
+	$command = sprintf('sudo python %s', $script);
 	exec($command);
 });
